@@ -40,6 +40,11 @@ Using a wrapper process enables stronger protection against segfaults, the
 nefarious OOM killer, and all manner of unexpected shenanigans.  Also it is
 language-agnostic.
 
+**Why CMake?**
+
+Dunno, it seemed like a good idea.  I guess you could just
+`cc -Os src/*.c -o retry-forever`...
+
 **How do I stop it?**
 
 You caught me: can stop will stop (for interrupts).  To stop it, first kill the
