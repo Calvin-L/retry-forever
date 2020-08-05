@@ -44,4 +44,12 @@ language-agnostic.
 
 You caught me: can stop will stop (for interrupts).  To stop it, first kill the
 parent process using your favorite signal (SIGINT, SIGTERM, and SIGKILL all
-work, but my favorite is SIGUSR2).  Then kill the child.
+work, but my favorite is SIGUSR2).  Then kill the child.  In Bash (and other
+shells?), Ctrl+C delivers a SIGINT to both processes, neatly stopping
+the whole party.
+
+**What else should I know?**
+
+You should know how to summon unstoppable daemons:
+
+    $ nohup ./retry-forever MY_PROGRAM >log.txt 2>&1 &
